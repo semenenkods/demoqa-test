@@ -1,14 +1,33 @@
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class SearchTests {
     @Test
     void successfulSearchTest() {
-        open("https://www.google.com/");
-        $("[name=q]").setValue("selenide").pressEnter();
-        $("[id=search]").shouldHave(text("https://selenide.org"));
+        open("https://demoqa.com/automation-practice-form");
+        $("#firstName").setValue("Test");
+        $("#lastName").setValue("First");
+        $("#userEmail").setValue("testfirst@gmail.com");
+        $(byText("Female")).click();
+        $("#userNumber").setValue(("1234567890"));
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__year-select").click();//add date selection
+        $(".react-datepicker__year-select").selectOptionContainingText("1990");
+        $(".react-datepicker__month-select").selectOptionContainingText("September");
+        $(byText("13")).click();
+        $("#subjectsInput").setValue("test");
+        $(byText("Sports")).click();
+        //$(".form-control-file").click();
+
+
+
+
+
+
+
+
+
     }
 }
