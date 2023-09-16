@@ -13,19 +13,15 @@ public class SearchTests {
         $(byText("Female")).click();
         $("#userNumber").setValue(("1234567890"));
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").click();//add date selection
+        $(".react-datepicker__year-select").click();
         $(".react-datepicker__year-select").selectOptionContainingText("1990");
         $(".react-datepicker__month-select").selectOptionContainingText("September");
         $(byText("13")).click();
-        $("#subjectsInput").setValue("test");
+        $("#subjectsInput").setValue("m");
+        $(byText("Maths")).click();
+
         $(byText("Sports")).click();
-        //$(".form-control-file").click();
-
-
-
-
-
-
+        $(byText("Select picture")).click();
 
 
 
